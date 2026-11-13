@@ -1,0 +1,281 @@
+INDIAN FOOD IMAGE CLASSIFICATION AND RECOGNITION SYSTEM
+1. Introduction
+This project focuses on developing an image classification system that can 
+automatically identify different Indian food dishes using Machine Learning and Deep Learning.
+The system uses images of different food categories to train a Convolutional
+Neural Network (CNN) model. The images are collected, organized, verified, labelled, 
+and preprocessed before model training.
+The trained model predicts the food category when a user uploads an image.
+This project combines computer vision, image processing, and deep learning 
+to build an intelligent food recognition system.
+2. Objective
+The main objectives of this project are:
+- To collect Indian food images from different categories.
+- To organize images into separate food-class folders.
+- To verify and label the collected images.
+- To preprocess images for machine learning.
+- To develop a CNN-based image classification model.
+- To evaluate the model using standard performance metrics.
+- To predict food categories from new images.
+- To develop a simple web application for food recognition.
+3. Dataset Collection Using Python
+Dataset collection is one of the important steps in this project.
+Image Collection
+Images of different Indian food dishes are collected using publicly available datasets.
+The dataset includes different food categories such as:
+- Burger
+- Butter Naan
+- Chai
+- Chapati
+- Chole Bhature
+- Dal Makhani
+- Dhokla
+- Fried Rice
+- Idli
+- Jalebi
+- Kathi Rolls
+- Kadai Paneer
+- Kulfi
+- Masala Dosa
+- Momos
+- Pani Puri
+- Pakode
+- Pav Bhaji
+- Pizza
+- Samosa
+Python scripts can be used to download, organize, and manage the images.
+Python Libraries Used
+- os – To create folders and manage files.
+- requests – To download images.
+- Pillow (PIL) – To open and save images.
+- OpenCV (cv2) – To resize and process images.
+- NumPy – For numerical operations.
+- Pandas – To create an Excel file containing image details.
+- Matplotlib – For data visualization.
+- Scikit-learn – For dataset splitting and evaluation.
+- PyTorch – For building and training the deep learning model.
+- Torchvision – For image transformations and pretrained models.
+
+Image Organization
+After collecting images, they are arranged into separate folders according to their food categories.
+Each folder contains images belonging to only one food class.
+Image Verification
+After collecting the images:
+- Every image is checked.
+- Incorrect images are removed.
+- Duplicate images are deleted.
+- Blurred images are removed.
+- Damaged images are removed.
+- Incorrect labels are corrected.
+ Excel File
+An Excel file is created using Python to maintain image information.
+Example:
+| Image Name | Image Path | Label |
+|---|---|---|
+| image1.jpg | Dataset/Idli | Idli |
+| image2.jpg | Dataset/Dosa | Masala Dosa |
+| image3.jpg | Dataset/Samosa | Samosa |
+ 4. Annotation Protocol
+Each image is checked carefully before adding it to the dataset.
+The label assigned to every image must match the actual food category.
+Rules followed:
+- One image belongs to the correct food category.
+- Incorrect labels are corrected.
+- Duplicate images are removed.
+- Blurred and unclear images are removed.
+- Images with multiple unrelated food items are checked carefully.
+- Each category is maintained separately.
+ 5. Dataset Statistics
+The project uses 20 predefined food categories.
+The exact number of images depends on the downloaded dataset and the images retained after verification.
+Example format for recording dataset statistics:
+| Food Category | Number of Images |
+|---|---:|
+| Idli | To be calculated |
+| Masala Dosa | To be calculated |
+| Samosa | To be calculated |
+| Biryani | To be calculated |
+| Chai | To be calculated |
+| Other categories | To be calculated |
+| Total | To be calculated |
+The final image counts are calculated using Python after dataset preparation.
+6. Hardware Requirements
+Processor: Intel Core i5 or higher
+RAM: 8 GB or more
+Storage: 10 GB or more free space
+GPU: Optional, recommended for faster model training
+Operating System: Windows 10/11
+7. Project Folder Structure
+Indian_Food_Classification/
+
+│── dataset/
+
+│   ├── Burger/
+
+│   ├── Butter_Naan/
+
+│   ├── Chai/
+
+│   ├── Chapati/
+
+│   ├── Chole_Bhature/
+
+│   ├── Dal_Makhani/
+
+│   ├── Dhokla/
+
+│   ├── Fried_Rice/
+
+│   ├── Idli/
+
+│   ├── Jalebi/
+
+│   ├── Kathi_Rolls/
+
+│   ├── Kadai_Paneer/
+
+│   ├── Kulfi/
+
+│   ├── Masala_Dosa/
+
+│   ├── Momos/
+
+│   ├── Pani_Puri/
+
+│   ├── Pakode/
+
+│   ├── Pav_Bhaji/
+
+│   ├── Pizza/
+
+│   └── Samosa/
+
+│── notebooks/
+
+│── models/
+
+│── results/
+
+│── reports/
+
+│── static/
+
+│── templates/
+
+│── dataset.xlsx
+
+│── train.py
+
+│── test.py
+
+│── app.py
+
+│── requirements.txt
+
+│── README.md
+8. Output Files
+The project generates the following output files:
+- Trained model (.pth)
+- Accuracy graph
+- Training loss graph
+- Validation loss graph
+- Confusion matrix
+- Classification report
+- Prediction results
+- Dataset information Excel file
+9. Version Control
+Git is used to manage the project source code.
+GitHub is used to store the project files, source code, and documentation.
+The project changes are tracked using Git commits.
+GitHub helps maintain the project and makes it easier to share with others.
+10. Model Training
+The model is trained using a Convolutional Neural Network (CNN).
+PyTorch is used as the deep learning framework.
+A ResNet-18 pretrained architecture can be used for transfer learning to improve image classification performance.
+Training Environment
+IDE: Visual Studio Code
+Programming Language: Python 3.x
+Deep Learning Model: ResNet-18 (CNN)
+Framework: PyTorch
+Operating System: Windows 10/11
+Python Libraries Used
+- PyTorch
+- Torchvision
+- NumPy
+- Pandas
+- OpenCV
+- Pillow
+- Matplotlib
+- Scikit-learn
+Training Steps
+1. Load the prepared food image dataset.
+2. Apply image preprocessing.
+3. Resize images to 224 × 224 pixels.
+4. Normalize the image values.
+5. Load the pretrained ResNet-18 model.
+6. Replace the final classification layer with 20 output classes.
+7. Train the model using the training dataset.
+8. Validate the model after each epoch.
+9. Save the best-performing model.
+11. Model Evaluation
+After training, the model is evaluated using the testing dataset.
+The following evaluation metrics are used:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+These metrics help measure how correctly the model identifies different Indian food categories.
+12. Results
+The trained model is designed to classify uploaded food images into the predefined food categories.
+For example:
+Input Image: Masala Dosa
+Predicted Output: Masala Dosa
+Input Image: Samosa
+Predicted Output: Samosa
+The confusion matrix and classification report are generated to analyze 
+the model's prediction performance.
+Actual accuracy and evaluation results are recorded after completing model training and testing.
+13. Web Application
+A simple web application is developed using Flask.
+The application allows users to upload food images and receive predictions.
+Application Steps
+1. Open the food recognition website.
+2. Upload an image of an Indian food dish.
+3. The uploaded image is processed by the application.
+4. The trained CNN model predicts the food category.
+5. The predicted food name is displayed on the screen.
+Technologies Used
+Frontend: HTML, CSS, JavaScript
+Backend: Flask
+Machine Learning: PyTorch
+Image Processing: OpenCV and Pillow
+14. Challenges
+During dataset preparation and model development, the following challenges may occur:
+- Collecting sufficient images for every food category.
+- Removing duplicate images.
+- Correcting incorrect labels.
+- Handling different lighting conditions.
+- Managing imbalanced datasets.
+- Reducing overfitting.
+- Improving model accuracy.
+- Correctly identifying visually similar food dishes.
+15. Future Improvements
+The project can be improved by:
+- Collecting more Indian food images.
+- Increasing the number of food categories.
+- Comparing ResNet-18 with MobileNet and EfficientNet.
+- Improving model accuracy through data augmentation.
+- Adding food ingredient identification.
+- Integrating calorie estimation.
+- Developing an Android application.
+- Deploying the application on a cloud platform.
+16. Conclusion
+The Indian Food Image Classification and Recognition System demonstrates the use of machine 
+learning and deep learning in computer vision.
+The project involves collecting and organizing food images, preparing labelled datasets
+preprocessing images, training a CNN model, and evaluating its performance.
+The trained model can identify different Indian food dishes from uploaded images. 
+The Flask application provides a simple interface for users to test the model.
+This project provides a practical understanding of image classification, dataset preparation, deep learning, and 
+real-world machine learning applications.
